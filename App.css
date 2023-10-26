@@ -1,0 +1,173 @@
+.App {
+  text-align: center;
+  align-content: center;
+}
+
+body{
+  color: white;
+  background: #1c1e21;
+}
+
+.options
+{
+  display: flex;
+  justify-content: center;
+}
+
+.home h1{
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.action-buttons{
+  text-align: center;
+}
+
+hr{
+  width: 30%;
+}
+
+.links{
+  font-weight: 600;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 5px 30px;
+  margin: 20px;
+  text-decoration: none;
+  background-color: #1c1e21;
+  color: aliceblue;
+  max-width: 500px;
+}
+
+.glow-on-hover {
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: rgb(19, 20, 24);
+  padding: 4px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  width: 18%;
+  min-width: 200px;
+}
+
+.popup button {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 15px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background: #0056b3;
+}
+
+.popup ul{
+  list-style: none;
+  text-align: left;
+  padding: 0px 3%;
+}
+
+.popup li{
+  border-radius: 4px;
+  padding: 8px 5px;
+}
+
+.popup a{
+  text-decoration: none;
+  font-size: larger;
+  color: white;
+}
+
+.popup li:hover {
+  background: rgb(70, 70, 90);
+}
+
+.popup p{
+  color: rgb(96, 96, 255);
+}
+
+.walConnect{
+  padding: 7px 12px;
+  border-radius: 4px;
+  font-weight: 500 ;
+  font-size: 15px;
+}
+
+@media(max-width: 500px)
+{
+  .options{
+    flex-direction: column;
+  }
+}
